@@ -1,0 +1,21 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+        "name": "(debug) Launch Python",
+        "type": "python",
+        "request": "launch",
+      // Please change to the executable of your current assignment. Python version of the lab exercises are using Jupyter Notebook.
+      // |  Assignment-1    | "${workspaceFolder}/Assignment-1/Python/test.py"      | "-icfg", "Assignment-1/Tests/testcases/icfg/test1.ll" |
+      // |  Assignment-2    | "${workspaceFolder}/Assignment-2/Python/test-sse.py"      | "Assignment-2/Tests/testcases/sse/test1.ll" |
+      // |  Assignment-3    | "${workspaceFolder}/Assignment-3/Python/test-ae.py"      | "Assignment-3/Tests/ae/test1.ll" |
+        "program": "${workspaceFolder}/under1/test-ae.py",  
+        "args": [
+          //"/Users/z5489735/2023/0424/Software-Security-Analysis-Marker/solution/Assignment-3/Python/cjson.ll"
+          "/Users/z5489735/2023/0424/Software-Security-Analysis-Marker/solution/SVF-Under/test_cases/test2.ll"
+        ],
+        "cwd": "${workspaceFolder}",
+        "console": "integratedTerminal"
+    }
+  ]
+}
