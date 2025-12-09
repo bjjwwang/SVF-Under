@@ -183,3 +183,35 @@ class Assignment3(AbstractExecution):
                 path.append(edge)
                 self.dfs(successor, end_node, paths, path)
                 path.pop()
+
+
+    def underApproxInterpret(self, path: List[pysvf.IntraCFGEdge]):
+        for edge in path:
+        # TODO:if cond branch, refine the value
+            if edge.getCondition() is not None:
+                if edge.getSuccessorCondValue() == 0:
+                    pass
+                else:
+                    pass
+        # handle other statements
+        # Addr, Copy, Load, Store, Gep, Call, Ret, BinaryOp, CmpStmt
+        # do not hande phi because DFS does not merge values from multiple predecessors
+            if isinstance(edge, pysvf.AddrStmt):
+                pass
+            elif isinstance(edge, pysvf.CopyStmt):
+                pass
+            elif isinstance(edge, pysvf.LoadStmt):
+                pass
+            elif isinstance(edge, pysvf.StoreStmt):
+                pass
+            elif isinstance(edge, pysvf.GepStmt):
+                pass    
+            elif isinstance(edge, pysvf.CallPE):
+                pass
+            elif isinstance(edge, pysvf.RetPE):
+                pass
+            elif isinstance(edge, pysvf.BinaryOPStmt):
+                pass
+            elif isinstance(edge, pysvf.CmpStmt):
+                pass
+
